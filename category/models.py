@@ -15,5 +15,4 @@ class Category(models.Model):
     def __str__(self):
         return self.category_name
 
-    def get_absolute_url(self):
-        return reverse("_detail", kwargs={"pk": self.pk})
+    
