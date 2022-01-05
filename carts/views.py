@@ -28,8 +28,6 @@ def add_cart(request, product_id):
     except CartItem.DoesNotExist:
         cart_item = CartItem.objects.create(product=product, quantity=1, cart=cart)
         cart_item.save()
-    return HttpResponse(cart_item.quantity)
-    exit()
     return redirect("cart")
 
 
